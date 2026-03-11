@@ -1,23 +1,41 @@
-document.getElementById('post-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+// 1. Mouse Events
+const mouseBtn = document.getElementById('mouse-btn');
+const mouseMsg = document.getElementById('mouse-msg');
 
-    const title = document.getElementById('title').value;
-    const content = document.getElementById('content').value;
+mouseBtn.addEventListener('mouseenter', () => {
+    mouseMsg.textContent = 'The mouse is hovering!';
+});
 
-    if (title && content) {
-        const postList = document.getElementById('post-list');
-        const postDiv = document.createElement('div');
-        postDiv.classList.add('post');
+mouseBtn.addEventListener('mouseleave', () => {
+    mouseMsg.textContent = 'The mouse has left!';
+});
 
-        postDiv.innerHTML = `
-            <h3>${title}</h3>
-            <p>${content}</p>
-        `;
+// 2. Keyboard Events
+const keyInput = document.getElementById('key-input');
+const keyMsg = document.getElementById('key-msg');
 
-        postList.appendChild(postDiv);
+keyInput.addEventListener('keydown', (event) => {
+    keyMsg.textContent = 'Last key pressed: ' + event.key;
+});
 
-        // Clear the form
-        document.getElementById('title').value = '';
-        document.getElementById('content').value = '';
+// 4. Focus and Blur
+const focusInput = document.getElementById('focus-input');
+const focusMsg = document.getElementById('focus-msg');
+
+focusInput.addEventListener('focus', () => {
+    focusMsg.textContent = 'Input is focused (active)!';
+});
+
+focusInput.addEventListener('blur', () => {
+    focusMsg.textContent = 'Input lost focus.';
+});
+
+// 5. Event Delegation
+const container = document.getElementById('btn-container');
+const delegMsg = document.getElementById('delegation-msg');
+
+container.addEventListener('click', (event) => {
+    if (event.target.tagName === 'BUTTON') {
+        delegMsg.textContent = 'You clicked: ' + event.target.textContent;
     }
 });

@@ -1,37 +1,28 @@
 <!DOCTYPE html>
 <html>
- <head>
- <title>My Portfolio</title>
- <link rel="stylesheet" href="css/styles.css">
+<head>
+    <title>JS Event Lab</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <h1>JavaScript Event Handling Lab</h1>
 
-    <header>
-        <h1>[Your Name]</h1>
-        <nav>
-            <p>Home | About | Projects | Contact</p>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a student learning web development.</p>
+    <section style="padding: 20px; border: 1px solid black; margin-top: 10px;">
+        <h2>4. Focus and Blur</h2>
+        <input type="text" id="focus-input" placeholder="Click in and out of here">
+        <p id="focus-msg"></p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>This is where my project list will go later.</p>
+    <section style="padding: 20px; border: 1px solid black; margin-top: 10px;">
+        <h2>5. Event Delegation</h2>
+        <div id="btn-container">
+            <button>Button A</button>
+            <button>Button B</button>
+            <button>Button C</button>
+        </div>
+        <p id="delegation-msg"></p>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at my email address.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 [Your Name]</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
