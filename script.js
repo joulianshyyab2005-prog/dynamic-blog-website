@@ -109,4 +109,4 @@ myStore.restockProduct("Milk", 5);
 myStore.listAllProducts();
 const cheapItems = myStore.getProductsUnderPrice(3.00);
 console.log("Items under $3.00:", cheapItems.map(p => p.name).join(", "));
-// update 13
+// update 14
